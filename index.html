@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Investimentos — Home</title>
+  <!-- Reset + styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Chart.js CDN (usado na página simuladores) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header / nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Investimentos<span class="dot">.</span></a>
+
+      <!-- Menu -->
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="simuladores.html" class="nav-link">Simuladores</a></li>
+          <li><a href="educacao.html" class="nav-link">Educação</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+          <li><a href="contato.html" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger para mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Dark mode toggle -->
+      <button id="themeToggle" class="btn-toggle">☾</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>Aprenda a investir com simulações práticas</h1>
+          <p>Calculadoras de CDB, simulador de imposto, gráficos e conteúdo educativo — tudo em um único lugar.</p>
+          <a href="simuladores.html" class="btn btn-primary">Ir para Simuladores</a>
+        </div>
+        <div class="hero-media">
+          <!-- Imagem de hero; substitua por assets/img/hero-investimentos.jpg -->
+          <img src="assets/img/hero-investimentos.jpg" alt="Investimentos" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features container">
+      <article class="card">
+        <img src="assets/img/icon-calculator.svg" alt="" class="card-icon" />
+        <h3>Simuladores</h3>
+        <p>IR, CDB, e gráficos interativos para ver seu dinheiro crescer.</p>
+        <a href="simuladores.html" class="btn btn-secondary">Abrir</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/img/icon-tax.svg" alt="" class="card-icon" />
+        <h3>Impostos</h3>
+        <p>Entenda como o Imposto de Renda incide sobre rendimentos.</p>
+        <a href="educacao.html" class="btn btn-secondary">Aprender</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/img/icon-contact.svg" alt="" class="card-icon" />
+        <h3>Contato</h3>
+        <p>Dúvidas? Entre em contato para tirar suas perguntas.</p>
+        <a href="contato.html" class="btn btn-secondary">Contato</a>
+      </article>
+    </section>
+
+    <!-- Media gallery (exemplo) -->
+    <section class="media-gallery container">
+      <h2>Galeria</h2>
+      <div class="gallery-grid">
+        <!-- 12 thumbnails de exemplo; substituir por assets/img/thumb*.jpg -->
+        <img class="media-item" src="assets/img/thumb1.jpg" alt="">
+        <img class="media-item" src="assets/img/thumb2.jpg" alt="">
+        <img class="media-item" src="assets/img/thumb3.jpg" alt="">
+        <img class="media-item" src="assets/img/thumb4.jpg" alt="">
+        <img class="media-item" src="assets/img/thumb5.jpg" alt="">
+        <img class="media-item" src="assets/img/thumb6.jpg" alt="">
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Investimentos — Projeto educacional</p>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script> <!-- comportamento: nav, darkmode -->
+</body>
+</html>

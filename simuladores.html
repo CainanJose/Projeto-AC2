@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simuladores — Investimentos</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Reaproveite header (poderia ser include em projeto real) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Investimentos<span class="dot">.</span></a>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="simuladores.html" class="nav-link active">Simuladores</a></li>
+          <li><a href="educacao.html" class="nav-link">Educação</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+          <li><a href="contato.html" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger2" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      <button id="themeToggle2" class="btn-toggle">☾</button>
+    </div>
+  </header>
+
+  <main class="container simuladores-main">
+    <h1>Simuladores</h1>
+    <section class="simulator-block">
+      <h2>Calculadora de lucro em CDB</h2>
+      <form id="cdbForm" class="simulator-form">
+        <label>Capital inicial (R$)
+          <input type="number" id="cdbPrincipal" value="10000" min="0" step="0.01">
+        </label>
+
+        <label>Taxa anual (%) — informe a taxa líquida anual esperada
+          <input type="number" id="cdbRate" value="8.5" step="0.01">
+        </label>
+
+        <label>Tempo (anos)
+          <input type="number" id="cdbYears" value="2" min="0" step="0.1">
+        </label>
+
+        <label>Capitalização
+          <select id="cdbFreq">
+            <option value="12">Mensal</option>
+            <option value="365">Diária</option>
+            <option value="1">Anual</option>
+          </select>
+        </label>
+
+        <label>Aplicar IR automático?
+          <select id="applyIr">
+            <option value="yes">Sim (usa tabela padrão)</option>
+            <option value="no">Não</option>
+          </select>
+        </label>
+
+        <button type="button" class="btn btn-primary" id="calcCdb">Calcular</button>
+        <button type="button" class="btn" id="saveSim">Salvar simulação</button>
+      </form>
+
+      <div class="results" id="cdbResults">
+        <!-- Aqui aparece resultado -->
+      </div>
+
+      <div class="chart-container">
+        <canvas id="cdbChart" height="150"></canvas>
+      </div>
+    </section>
+
+    <section class="simulator-block">
+      <h2>Simulador de Imposto de Renda (IR) — investimentos</h2>
+      <p>Use para ver quanto o IR reduzirá seu lucro (padrões BR: 22.5% / 20% / 17.5% / 15% por faixas de prazo).</p>
+
+      <form id="irForm" class="simulator-form">
+        <label>Rendimento bruto (R$)
+          <input type="number" id="irGross" value="1000" step="0.01">
+        </label>
+        <label>Prazo em dias
+          <input type="number" id="irDays" value="365" min="1">
+        </label>
+        <button type="button" class="btn btn-primary" id="calcIr">Calcular IR</button>
+      </form>
+
+      <div id="irResults" class="results"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© 2025 Investimentos — Projeto educacional</p></div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
